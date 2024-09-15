@@ -8,6 +8,10 @@ This project is a customer support chatbot designed to answer questions about Th
 - **GPT-4o Fallback**: If a user's question doesn't match a predefined answer, the chatbot falls back to OpenAI's GPT-4o model to generate a response.
 - **User-Friendly Interface**: Built using Streamlit, the chatbot provides an easy-to-use web interface for interacting with the AI.
 
+## 🚀 Try the App
+
+You can test the live app here: [Customer Support Chatbot](https://llm-powered-customerbot-mryubzekkbkipao2amgrah.streamlit.app/)
+
 ## Tech Stack
 
 - **Streamlit**: Used for building the front-end UI of the chatbot.
