@@ -2,7 +2,6 @@ import streamlit as st
 from openai import OpenAI
 import os
 
-# Define your OpenAI API key
 openai_api_key = os.environ['OPENAI_API_KEY']
 client = OpenAI(api_key=openai_api_key)
 
@@ -40,9 +39,9 @@ qa_data = {
 # Function to get a response from OpenAI GPT-4o chat completions API
 def get_llm_response(user_input):
     try:
-        # Call OpenAI's GPT-4o API using the chat completions format
+        
         response = client.chat.completions.create(
-            model="gpt-4o",  # Ensure you're using the right model identifier
+            model="gpt-4o",  
             messages=[{
                 "role": "system",
                 "content": "You are a helpful assistant."
@@ -66,16 +65,11 @@ def get_response(user_input):
     return get_llm_response(user_input)
 
 
-# Streamlit UI
 st.title("Thoughtful AI Customer Support Chatbot")
 
-# Text input box for user to ask questions
+
 user_input = st.text_input("Ask a question about Thoughtful AI:", "")
-
-# If the user submits a question
 if user_input:
-    # Get the response from the chatbot
+    
     response = get_response(user_input)
-
-    # Display the response
     st.write(f"**Answer:** {response}")
